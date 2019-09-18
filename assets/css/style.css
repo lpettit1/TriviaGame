@@ -1,34 +1,45 @@
 
 
-.background {
-    background-image: Url("../images/mystery van.jpg");
-    background-position: center;
-    height: 250px;
-    background-repeat: repeat;
-    padding: 250px;
-    
+body {
+    background: url(../images/mystery\ van.jpg);
+}
 
+.wrapper {
+    text-align: center;
+    background: url(../images/images.png);
+    margin-top: 50px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 100px;
+    height: 500px;
+}
 
-};    
+.answer-generated {
+    text-align: center;
+}
 
+.answer-generated:hover {
+    border: 1px solid black;
+    background: yellow;
+    cursor: pointer;
+}
 
-.container {
-    font-family: "asset", cursive;
-    color: chartreuse;
-};
-
-
-h1 {
-    font-family: "modak", cursive;
-};
-
-.start {
+.startButton {
     border: 1px solid black;
     background: yellow;
     cursor: pointer;
     text-align: center;
-    
-};
 
+}
 
+#answers {
+    text-align: center;
+}
 
+h1 {
+    color: chartreuse;
+}
+
+#timeRemaining {
+    color: chartreuse;
+}
