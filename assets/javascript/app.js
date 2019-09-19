@@ -112,7 +112,7 @@ $(document).ready(function () {
         timeLeft = timeReset;
         $("#timeLeft").html(timeLeft);
         emptyText();
-        $(".question").text("Correct!!");
+        $(".questions").text("Correct!!");
         var imgDisplay = $("<img>");
         imgDisplay.attr("src", qImg);
         $("#answers").append(imgDisplay);
@@ -179,7 +179,7 @@ $(document).ready(function () {
     //functions for object, questions & answers pull up date screen
 
     function displayQuestion(x) {
-        emptyText;
+        emptyText();
         if (qCounter === 11) {
             gameOver()
 
@@ -188,8 +188,7 @@ $(document).ready(function () {
 
             var answers = questionsObject[x].possibleAnswers;
 
-            cAnswer = questionsObject[x].answer;
-
+            cAnswer = questionsObject[x].answers;
             qImg = questionsObject[x].imageLocation;
 
             for (i = 0; i < answers.length; i++) {
@@ -199,12 +198,12 @@ $(document).ready(function () {
                 h1.attr("data-value", answers[i]);
                 h1.text(answers[i]);
 
-                answersDiv.append(h1);
+                answerDiv.append(h1);
 
-                $("#answers").append(answersDiv);
+                $("#answers").append(answerDiv);
             }
 
-            $(".question").text(currentQuestion);
+            $(".questions").text(currentQuestion);
             countDownTime();
 
             $(".answer-generated").on("click", function () {
